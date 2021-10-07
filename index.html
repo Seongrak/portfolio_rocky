@@ -28,20 +28,23 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav id="navbar"></nav>
-    <div class="nevbar_logo">
-      <i class="fas fa-mountain"></i>
-      <a href="#">Rocky</a>
-    </div>
+    <nav id="navbar">
+      <div class="navbar_logo">
+        <i class="fas fa-mountain"></i>
+        <a href="#">Rocky</a>
+      </div>
 
-    <ul class="navbar_menu">
-      <li class="navbar_menu_item">Home</li>
-      <li class="navbar_menu_item">About</li>
-      <li class="navbar_menu_item">Skills</li>
-      <li class="navbar_menu_item">Work</li>
-      <li class="navbar_menu_item">Testimonials</li>
-      <li class="navbar_menu_item">Contact</li>
-    </ul>
+      <div class="navbar_menu">
+        <ul class="navbar_menu">
+          <li class="navbar_menu_item active">Home</li>
+          <li class="navbar_menu_item">About</li>
+          <li class="navbar_menu_item">Skills</li>
+          <li class="navbar_menu_item">Work</li>
+          <li class="navbar_menu_item">Testimonials</li>
+          <li class="navbar_menu_item">Contact</li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- Home -->
     <section id="home">
@@ -50,8 +53,10 @@
         alt="Rocky's profile photo"
         class="myphoto"
       />
-      <h1>Hello, Rocky Choi</h1>
-      <h2>A Software Engineer living in Toronto,Canada</h2>
+      <h1 class="home_title">Rocky Choi</h1>
+      <h2 class="home_description">
+        A Software Engineer living in Toronto,Canada
+      </h2>
       <button class="home_button">Contact Me</button>
     </section>
 

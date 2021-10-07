@@ -1,0 +1,147 @@
+/* Global */
+:root {
+  /* Color */
+  --color-blue-grey: #eceff1;
+  --color-blue-dark-grey: #babdbe;
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-black: #000000;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-orange: #feb546;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight Google font */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0px;
+}
+
+/* Navbar */
+#navbar {
+  display: flex; /* 블록모델 수평으로 만듦 */
+  justify-content: space-between; /* 수평 */
+  background-color: var(--color-blue-dark-grey);
+  align-items: center; /* 수직 */
+  color: var(--color-white);
+  padding: 16px;
+}
+
+.navbar_menu {
+  display: flex;
+}
+.navbar_logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+.navbar_menu_item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+.navbar_menu_item.active {
+  border: 1px solid var(--color-white);
+}
+.navbar_menu_item:hover {
+  background-color: var(--color-blue);
+}
+
+/* Home */
+#home {
+  background: url("imgs/home-backgounrd1.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+.myphoto {
+  width: 250px;
+  height: 250px;
+  border-radius: 25%;
+  border: 2px solid var(--color-white);
+}
+
+.home_title,
+.home_description {
+  color: var(--color-white);
+}
+
+.home_button {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-white);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
