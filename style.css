@@ -120,6 +120,15 @@ p {
 .navbar_menu_item:hover {
   background-color: var(--color-blue);
 }
+.navbar_toggle-btn {
+  position: absolute;
+  right: 32px;
+  top: 24px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+  /* opacity로 할경우 클릭이 가능해짐*/
+}
 
 /* Home */
 #home {
@@ -156,6 +165,7 @@ p {
   margin: auto;
 }
 .section_container {
+  /*사이즈 고정*/
   max-width: 1200px;
   margin: auto;
 }
@@ -403,4 +413,41 @@ p {
 .contact_links i:hover {
   transform: scale(1.2);
   color: var(--color-blue);
+}
+
+/* 768px 스크린 width 보다 작을때 */
+@media screen and (max-width: 768px) {
+  .navbar_toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar_menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .About_skills {
+    flex-direction: column;
+  }
+  .skill {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+  .testimonial_pic {
+    width: 80px;
+    height: 80px;
+  }
 }

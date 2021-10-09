@@ -36,7 +36,7 @@
 
       <div class="navbar_menu">
         <ul class="navbar_menu">
-          <li class="navbar_menu_item active">Home</li>
+          <li class="navbar_menu_item">Home</li>
           <li class="navbar_menu_item">About</li>
           <li class="navbar_menu_item">Skills</li>
           <li class="navbar_menu_item">Work</li>
@@ -44,6 +44,10 @@
           <li class="navbar_menu_item">Contact</li>
         </ul>
       </div>
+
+      <button class="navbar_toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <!-- Home -->
@@ -188,140 +192,144 @@
 
     <!-- Projects -->
     <section id="projects" class="section">
-      <h1>My Work</h1>
-      <h3>Projects</h3>
-      <div class="work_categories">
-        <button class="category_btn">
-          All <span class="category_count active">6</span>
-        </button>
-        <button class="category_btn">
-          Front-end <span class="category_count">2</span>
-        </button>
-        <button class="category_btn">
-          Back-end <span class="category_count">2</span>
-        </button>
-        <button class="category_btn">
-          Window apps <span class="category_count">2</span>
-        </button>
-        <button class="category_btn">
-          ETC <span class="category_count">1</span>
-        </button>
-      </div>
-      <div class="work_projects">
-        <a
-          href="https://github.com/Seongrak/movie_app"
-          class="project"
-          target="blank"
-        >
-          <img
-            src="/imgs/projects/movieapp.png"
-            alt="movieapp"
-            class="project_img"
-          />
-          <div class="project_description">
-            <h3>Movie App</h3>
-            <span>ReactJS,HTML,CSS</span>
-          </div>
-        </a>
+      <div class="section_container">
+        <h1>My Work</h1>
+        <h3>Projects</h3>
+        <div class="work_categories">
+          <button class="category_btn">
+            All<span class="category_count active">6</span>
+          </button>
+          <button class="category_btn">
+            Front-end<span class="category_count">2</span>
+          </button>
+          <button class="category_btn">
+            Back-end<span class="category_count">2</span>
+          </button>
+          <button class="category_btn">
+            Window<span class="category_count">2</span>
+          </button>
+          <button class="category_btn">
+            ETC<span class="category_count">1</span>
+          </button>
+        </div>
+        <div class="work_projects">
+          <a
+            href="https://github.com/Seongrak/movie_app"
+            class="project"
+            target="blank"
+          >
+            <img
+              src="/imgs/projects/movieapp.png"
+              alt="movieapp"
+              class="project_img"
+            />
+            <div class="project_description">
+              <h3>Movie App</h3>
+              <span>ReactJS,HTML,CSS</span>
+            </div>
+          </a>
 
-        <a
-          href="https://github.com/Seongrak/CSharp_-BulletinBoard"
-          class="project"
-          target="blank"
-        >
-          <img
-            src="/imgs/projects/noteapp.png"
-            alt="noteapp"
-            class="project_img"
-          />
-          <div class="project_description">
-            <h3>Bulletin Board</h3>
-            <span>C#, ASP.NET MVC, JavaScript,HTML,CSS</span>
-          </div>
-        </a>
+          <a
+            href="https://github.com/Seongrak/CSharp_-BulletinBoard"
+            class="project"
+            target="blank"
+          >
+            <img
+              src="/imgs/projects/noteapp.png"
+              alt="noteapp"
+              class="project_img"
+            />
+            <div class="project_description">
+              <h3>Bulletin Board</h3>
+              <span>C#, ASP.NET MVC, JavaScript,HTML,CSS</span>
+            </div>
+          </a>
 
-        <a
-          href="https://github.com/Seongrak/Seneca-Projects/tree/main/OLS655"
-          class="project"
-          target="blank"
-        >
-          <img src="/imgs/projects/ols.png" alt="ols" class="project_img" />
-          <div class="project_description">
-            <h3>Extreme Avocation App</h3>
-            <span>C#, ASP.NET MVC, MySQL</span>
-          </div>
-        </a>
+          <a
+            href="https://github.com/Seongrak/Seneca-Projects/tree/main/OLS655"
+            class="project"
+            target="blank"
+          >
+            <img src="/imgs/projects/ols.png" alt="ols" class="project_img" />
+            <div class="project_description">
+              <h3>Extreme Avocation App</h3>
+              <span>C#, ASP.NET MVC, MySQL</span>
+            </div>
+          </a>
 
-        <a
-          href="https://github.com/Seongrak/Seneca-Projects/tree/main/PRG455"
-          class="project"
-          target="blank"
-        >
-          <img
-            src="/imgs/projects/prg455.png"
-            alt="prg455"
-            class="project_img"
-          />
-          <div class="project_description">
-            <h3>Course Database App</h3>
-            <span>C#, MSSQL</span>
-          </div>
-        </a>
+          <a
+            href="https://github.com/Seongrak/Seneca-Projects/tree/main/PRG455"
+            class="project"
+            target="blank"
+          >
+            <img
+              src="/imgs/projects/prg455.png"
+              alt="prg455"
+              class="project_img"
+            />
+            <div class="project_description">
+              <h3>Course Database App</h3>
+              <span>C#, MSSQL</span>
+            </div>
+          </a>
 
-        <a
-          href="https://github.com/Seongrak/C-sharp-practice/tree/main/SchoolApp"
-          class="project"
-          target="blank"
-        >
-          <img
-            src="/imgs/projects/schoolapp.png"
-            alt="schoolapp"
-            class="project_img"
-          />
-          <div class="project_description">
-            <h3>School App</h3>
-            <span>C#</span>
-          </div>
-        </a>
+          <a
+            href="https://github.com/Seongrak/C-sharp-practice/tree/main/SchoolApp"
+            class="project"
+            target="blank"
+          >
+            <img
+              src="/imgs/projects/schoolapp.png"
+              alt="schoolapp"
+              class="project_img"
+            />
+            <div class="project_description">
+              <h3>School App</h3>
+              <span>C#</span>
+            </div>
+          </a>
 
-        <a
-          href="https://github.com/Seongrak/Seneca-Projects/tree/main/Fine%20Particle%20Dectector"
-          class="project"
-          target="blank"
-        >
-          <img src="/imgs/projects/tpj.png" alt="tpj" class="project_img" />
-          <div class="project_description">
-            <h3>Fine Particle Detector</h3>
-            <span>Arduino, C</span>
-          </div>
-        </a>
+          <a
+            href="https://github.com/Seongrak/Seneca-Projects/tree/main/Fine%20Particle%20Dectector"
+            class="project"
+            target="blank"
+          >
+            <img src="/imgs/projects/tpj.png" alt="tpj" class="project_img" />
+            <div class="project_description">
+              <h3>Fine Particle Detector</h3>
+              <span>Arduino, C</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- Testimonials -->
     <section id="testimonials" class="section">
-      <h1>Testimonials</h1>
-      <h3>See what they say about me</h3>
-      <div class="testominials">
-        <div class="testimonial">
-          <img src="imgs/gab.jpg" alt="gab" class="testimonial_pic" />
-          <div class="testimonial_contents">
-            <p>Rocky was awesome</p>
-            <p class="name">Gabriel / IEEE Seneca</p>
+      <div class="section_container">
+        <h1>Testimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="testominials">
+          <div class="testimonial">
+            <img src="imgs/gab.jpg" alt="gab" class="testimonial_pic" />
+            <div class="testimonial_contents">
+              <p>Rocky was awesome</p>
+              <p class="name">Gabriel / IEEE Seneca</p>
+            </div>
           </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial_contents">
-            <p>
-              Rocky is not only a responsible person but someone willing to
-              serve our customers with a big smile. He is diligent and organized
-              while never forgetting the principles of customer service. Because
-              he is a detail-oriented person, he always makes sure that
-              everything is in place and well done.
-            </p>
-            <p class="name">Jason / Korean Village</p>
+          <div class="testimonial">
+            <div class="testimonial_contents">
+              <p>
+                Rocky is not only a responsible person but someone willing to
+                serve our customers with a big smile. He is diligent and
+                organized while never forgetting the principles of customer
+                service. Because he is a detail-oriented person, he always makes
+                sure that everything is in place and well done.
+              </p>
+              <p class="name">Jason / Korean Village</p>
+            </div>
+            <img src="imgs/jas.jpg" alt="jas" class="testimonial_pic" />
           </div>
-          <img src="imgs/jas.jpg" alt="jas" class="testimonial_pic" />
         </div>
       </div>
     </section>
