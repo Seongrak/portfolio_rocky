@@ -2,7 +2,7 @@
 :root {
   /* Color */
   --color-blue-grey: #eceff1;
-  --color-blue-dark-grey: #babdbe;
+  --color-blue-dark-grey: #b1bfca;
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
@@ -29,6 +29,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Annimation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -144,4 +147,201 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+}
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+.section_container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.About_skills {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.skill_icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  line-height: 170px;
+  margin: auto;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.skill_icon i {
+  transition: all var(--animation-duration);
+}
+
+.skill_icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1);
+}
+.skill_title,
+.skill_description {
+  color: var(--color-dark-grey);
+}
+
+.skill_description {
+  font-size: var(--font-small);
+}
+
+/* Skills */
+#skills {
+  background-color: var(--color-blue-dark-grey);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skillset_title {
+  color: var(--color-white);
+}
+.skillset_skill {
+  margin-bottom: 32px;
+}
+.skillset_description {
+  display: flex;
+}
+.skill_bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill_value {
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset_left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skillset_right {
+  flex-basis: 40%;
+}
+
+.tools {
+  padding: 20px;
+}
+
+.etc {
+  padding: 20px;
+  background-color: var(--color-grey);
+  font-size: var(--font-regular);
+}
+
+/* Projects */
+.work_categories {
+  margin: 40px;
+}
+.category_btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category_btn.active,
+.category_btn:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+/*카테고리버튼이 엑티브일때, 카테고리카운트변경*/
+.category_btn.atvie .category_count,
+.category_btn:hover .category_count {
+  opacity: 1;
+  top: 0;
+}
+
+.category_count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  display: inline-block; /* span은 꽉 감싸기 때문에 블록 변경*/
+  line-height: 24px; /* 가운데 정렬, height과 같게 */
+  /* 애니메이션 */
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration) ease;
+}
+
+.work_projects {
+  display: flex;
+  flex-wrap: wrap; /* 한줄에 안담기면 밑으로*/
+  justify-content: center;
+}
+
+.project {
+  position: relative; /* project_description 클래스의 absoulte 사용을 위해 */
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+  /*정렬*/
+  display: flex;
+  justify-content: center; /*수평*/
+  align-items: center; /*수직*/
+}
+
+.project_img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project_description {
+  position: absolute; /* 부모의 포지션이 static이 아닌곳까지감, 그런데 dafulat= static*/
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  /*수직정렬*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .project_description {
+  opacity: 0.7;
+}
+
+.project_description h3 {
+  color: var(--color-orange);
+}
+.project_description h3:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
 }
