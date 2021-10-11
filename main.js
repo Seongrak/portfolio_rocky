@@ -20,7 +20,36 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  scrollIntoView(link);
+});
 
-  const scrollTo = document.querySelector(link);
+// contact button in home section
+const contactHome = document.querySelector(".home_button");
+contactHome.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
+}
+
+// Home section, slowly fade
+const home = document.querySelector("#home");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// Arrow up
+const arrowUp = document.querySelector(".arrow");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
 });

@@ -134,6 +134,7 @@ p {
   /* opacity로 할경우 클릭이 가능해짐*/
 }
 
+/* 고정 */
 #navbar.navbar--dark {
   background-color: var(--color-grey);
   padding: 8px;
@@ -424,6 +425,29 @@ p {
 .contact_links i:hover {
   transform: scale(1.2);
   color: var(--color-blue);
+}
+
+/* Arrow up */
+.arrow {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-grey);
+  color: var(--color-white);
+  border-radius: 50%;
+  /* display: none; */
+  /* dispaly none 일경우 애니메이션 적용이 안되기 때문*/
+  opacity: 0;
+  transition: opacity var(--animation-duration) ease-in;
+  pointer-events: none; /*안보일때 클릭 안되게 하려고*/
+}
+
+.arrow.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* 768px 스크린 width 보다 작을때 */
