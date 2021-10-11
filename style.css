@@ -95,10 +95,14 @@ p {
 #navbar {
   display: flex; /* 블록모델 수평으로 만듦 */
   justify-content: space-between; /* 수평 */
-  background-color: var(--color-blue-dark-grey);
+  background-color: transparent;
   align-items: center; /* 수직 */
   color: var(--color-white);
   padding: 16px;
+
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .navbar_menu {
@@ -130,16 +134,23 @@ p {
   /* opacity로 할경우 클릭이 가능해짐*/
 }
 
+#navbar.navbar--dark {
+  background-color: var(--color-grey);
+  padding: 8px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
 /* Home */
 #home {
   background: url("imgs/home-backgounrd1.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 .myphoto {
   width: 250px;
   height: 250px;
-  border-radius: 25%;
+  border-radius: 50%;
   border: 2px solid var(--color-white);
 }
 
