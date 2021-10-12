@@ -151,7 +151,7 @@ p {
 .myphoto {
   width: 250px;
   height: 250px;
-  border-radius: 50%;
+  border-radius: 20%;
   border: 2px solid var(--color-white);
 }
 
@@ -170,6 +170,9 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.home_button:hover {
+  background-color: var(--color-blue);
+}
 /* Section common */
 .section {
   padding: 50px;
@@ -278,6 +281,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  width: 250px;
 }
 
 .category_btn.active,
@@ -464,6 +468,15 @@ p {
 
 /* 768px 스크린 width 보다 작을때 */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar_toggle-btn {
     display: block;
   }
@@ -501,5 +514,9 @@ p {
   .testimonial_pic {
     width: 80px;
     height: 80px;
+  }
+
+  .section {
+    padding: 16px;
   }
 }
