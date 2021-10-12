@@ -20,7 +20,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar_toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // contact button in home section
@@ -65,6 +72,12 @@ workBtnContainer.addEventListener("click", (e) => {
     return;
   }
 
+  const selected = document.querySelector(".category_btn.active");
+  selected.classList.remove("active");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("active");
+
   // animation
   proejctBtnContainer.classList.add("anime-out");
 
@@ -76,7 +89,6 @@ workBtnContainer.addEventListener("click", (e) => {
         project.classList.add("invisible");
       }
     });
-
     proejctBtnContainer.classList.remove("anime-out");
   }, 300);
 });
