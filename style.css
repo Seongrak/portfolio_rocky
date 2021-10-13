@@ -60,6 +60,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0;
 }
 
 /* Typography */
@@ -127,7 +128,7 @@ p {
 .navbar_toggle-btn {
   position: absolute;
   right: 32px;
-  top: 24px;
+  top: 12px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -475,6 +476,10 @@ p {
     --font-regular: 16px;
     --font-small: 14px;
     --font-micro: 12px;
+  }
+
+  .section {
+    padding: 16px;
   }
 
   .navbar_toggle-btn {
