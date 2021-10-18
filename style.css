@@ -152,7 +152,7 @@ p {
 .myphoto {
   width: 250px;
   height: 250px;
-  border-radius: 20%;
+  border-radius: 50%;
   border: 2px solid var(--color-white);
 }
 
