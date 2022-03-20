@@ -219,6 +219,7 @@ p {
 
 .skill_description {
   font-size: var(--font-small);
+  font-weight: bold;
 }
 
 /* Skills */
@@ -274,6 +275,14 @@ p {
 }
 
 /* Projects */
+#projects {
+  background-color: var(--color-blue-dark-grey);
+}
+
+.projects_title {
+  color: white;
+}
+
 .work_categories {
   margin: 40px;
 }
@@ -283,12 +292,13 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
   width: 250px;
+  color: var(--color-white);
 }
 
 .category_btn.active,
 .category_btn:hover {
   background-color: var(--color-blue);
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 /*카테고리버튼이 엑티브일때, 카테고리카운트변경*/
@@ -320,6 +330,12 @@ p {
   justify-content: center;
   opacity: 1;
   transition: all var(--animation-duration) ease-out;
+}
+
+.project_container {
+  overflow-y: auto;
+  max-width: 1200px;
+  height: 420px;
 }
 
 .work_projects.anime-out {
@@ -478,10 +494,6 @@ p {
     --font-micro: 12px;
   }
 
-  .section {
-    padding: 16px;
-  }
-
   .navbar_toggle-btn {
     display: block;
   }
@@ -519,9 +531,5 @@ p {
   .testimonial_pic {
     width: 80px;
     height: 80px;
-  }
-
-  .section {
-    padding: 16px;
   }
 }

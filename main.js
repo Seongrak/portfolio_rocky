@@ -21,7 +21,16 @@ navbarMenu.addEventListener("click", (event) => {
     return;
   }
   navbarMenu.classList.remove("open");
-  scrollIntoView(link);
+  const scrollMove = document.querySelector(link);
+  const top =
+    scrollMove.offsetTop - navbarHeight < 0 ? 0 : scrollMove.offsetTop - 25;
+
+  window.scrollTo({
+    top: top,
+    left: 0,
+    behavior: "smooth",
+  });
+  //scrollIntoView(link);
 });
 
 // navbar toggle button for small screen
